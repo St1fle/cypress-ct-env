@@ -22,7 +22,9 @@ export default class Button extends Vue {
   public properties!: ButtonProperties;
 
   get disabled(): boolean {
-    return this.properties.disabled;
+    console.log(process.env);
+
+    return process.env.NOVE_ENV === 'development';
   }
 
   get buttonClasses(): Record<string, boolean> {

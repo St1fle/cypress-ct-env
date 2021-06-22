@@ -4,11 +4,9 @@ import { ButtonProperties } from './ButtonProperties';
 
 describe(Button.name, () => {
   const title = 'button title';
-  const disabled = true;
 
   const properties: ButtonProperties = new ButtonProperties({
     title,
-    disabled,
   });
 
   beforeEach(
@@ -18,7 +16,9 @@ describe(Button.name, () => {
   );
 
   it('should have title, type and be disabled', () => {
-    cy.get('.button__control').should('have.text', 'some invalid title');
+    cy.log(Cypress.env('NODE_ENV'));
+
+    cy.get('.button__control').should('contain.text', title);
 
     cy.get('.button__control--disabled').should('be.visible');
     cy.get('.button__control').should('be.disabled');

@@ -12,5 +12,11 @@ module.exports = (on: any, config: any): void => {
     });
   });
 
+  // This doesn't work...
+  // config.env = process.env;
+
+  // This doesn't work either...
+  // config.env.NODE_ENV = 'development';
+
   return config;
 };

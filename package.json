@@ -1,7 +1,7 @@
 {
-  "name": "cypress-component-testing-error",
+  "name": "cypress-ct-env",
   "version": "1.0.0",
-  "description": "Example repo of Cypress component testing failing.",
+  "description": "Example repo of Cypress component testing not setting env variables in components.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/{**/,}*.{ts,js}",
