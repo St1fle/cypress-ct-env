@@ -16,7 +16,7 @@ module.exports = (on: any, config: any): void => {
   // config.env = process.env;
 
   // This doesn't work either...
-  // config.env.NODE_ENV = 'development';
+  // config.env.NODE_ENV = 'test';
 
   return config;
 };

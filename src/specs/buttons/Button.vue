@@ -22,9 +22,11 @@ export default class Button extends Vue {
   public properties!: ButtonProperties;
 
   get disabled(): boolean {
-    console.log(process.env);
+    console.log('process.env:', JSON.stringify(process.env));
+    console.log('process.env.NODE_ENV:', process.env.NODE_ENV);
+    console.log('process.env.NODE_ENV equals development:', process.env.NODE_ENV === 'development');
 
-    return process.env.NOVE_ENV === 'development';
+    return process.env.NODE_ENV === 'test';
   }
 
   get buttonClasses(): Record<string, boolean> {
